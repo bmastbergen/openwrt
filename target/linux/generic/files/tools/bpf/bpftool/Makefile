@@ -52,8 +52,8 @@ bash_compdir ?= /usr/share/bash-completion/completions
 
 CFLAGS += -O2
 CFLAGS += -W -Wall -Wextra -Wno-unused-parameter -Wshadow
-CFLAGS += -D__EXPORTED_HEADERS__ -I$(srctree)/tools/include/uapi -I$(srctree)/tools/include -I$(srctree)/tools/lib/bpf -I$(srctree)/kernel/bpf/
-LIBS = -lelf -lbfd -lopcodes $(LIBBPF)
+CFLAGS += -DPACKAGE='"bpftool"' -D__EXPORTED_HEADERS__ -I$(srctree)/tools/include/uapi -I$(srctree)/tools/include -I$(srctree)/tools/lib/bpf -I$(srctree)/kernel/bpf/
+LIBS = -lelf -lbfd -lopcodes $(LIBBPF) /home/brett/Untangle/openwrt/build_dir/target-x86_64_musl/musl-fts-1.2.7/ipkg-install/usr/lib/libfts.a
 
 include $(wildcard *.d)
 
