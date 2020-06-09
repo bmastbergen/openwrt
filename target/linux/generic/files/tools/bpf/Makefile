@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 prefix = /usr
 
-CC = gcc
+#CC = gcc
 LEX = flex
 YACC = bison
 MAKE = make
